@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 def no_c(my_string):
-    a = len(my_string)
-    for i in a:
-        if my_string[i] != "c":
-            print(f"{my_string[i]}")
+    noc_str = ""
+    for i in my_string:
+        if (i != "c")and(i != "c"):
+            noc_str += i
+        return (noc_str)
