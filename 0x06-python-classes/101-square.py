@@ -1,24 +1,24 @@
 #!/usr/bin/python3
 
-"""Define a class Square."""
+"""class Square."""
 
 
 class Square:
-    """Represent a square."""
+    """square."""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initialize a new square.
+        """new square.
 
         Args:
-            size (int): The size of the new square.
-            position (int, int): The position of the new square.
+            size (int): size of new square.
+            position (int, int): position of new square.
         """
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        """Get/set the current size of the square."""
+        """Get/set current size of square."""
         return (self.__size)
 
     @size.setter
@@ -31,7 +31,7 @@ class Square:
 
     @property
     def position(self):
-        """Get/set the current position of the square."""
+        """Get/set current position of square."""
         return (self.__position)
 
     @position.setter
@@ -44,11 +44,11 @@ class Square:
         self.__position = value
 
     def area(self):
-        """Return the current area of the square."""
+        """Return current area of square."""
         return (self.__size * self.__size)
 
     def my_print(self):
-        """Print the square with the # character."""
+        """Print square with the # character."""
         if self.__size == 0:
             print("")
             return
@@ -60,7 +60,7 @@ class Square:
             print("")
 
     def __str__(self):
-        """Define the print() representation of a Square."""
+        """Define print() representation of a Square."""
         if self.__size != 0:
             [print("") for i in range(0, self.__position[1])]
         for i in range(0, self.__size):
