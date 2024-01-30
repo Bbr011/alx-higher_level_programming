@@ -63,4 +63,4 @@ class Rectangle:
                 reclist.append('#')
                 if i != self.__height - 1:
                     reclist.append("\n")
-        return ("".join(rect))
+        return ("".join(reclist))
