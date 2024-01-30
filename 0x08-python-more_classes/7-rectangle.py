@@ -64,7 +64,7 @@ class Rectangle:
 
         reclist = []
         for i in range(self.__height):
-            [reclist.append(str.self(print_symbol)) for j in range(self.__width)]
+            [reclist.append(str(self.print_symbol)) for j in range(self.__width)]
             if i != self.__height - 1:
                 reclist.append("\n")
         return ("".join(reclist))
