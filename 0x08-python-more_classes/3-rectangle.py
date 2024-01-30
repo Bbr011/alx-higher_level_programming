@@ -55,7 +55,7 @@ class Rectangle:
         Represents the rectangle with the # character.
         """
         if self.__width == 0 or self.__height == 0:
-            return (0)
+            return ("")
 
         reclist = []
         for i in range(self.__height):
@@ -63,4 +63,3 @@ class Rectangle:
                 if i != self.__height - 1:
                     reclist.append('#')
         return ("".join(rect))
-
