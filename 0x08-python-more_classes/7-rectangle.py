@@ -4,7 +4,11 @@
 
 
 class Rectangle:
-    """rectangle"""
+    """rectangle
+    Attributes:
+        number_of_instances (int): The number of Rectangle instances.
+        print_symbol (any): The symbol used for string representation.
+    """
     number_of_instances = 0
     print_symbol = "#"
 
