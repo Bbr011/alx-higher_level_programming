@@ -70,4 +70,4 @@ class Rectangle:
         """Return the string representation of the Rectangle."""
         reclist = "Rectangle(" + str(self.__width)
         reclist += ", " + str(self.__height) + ")"
-        return (rect)
+        return (reclist)
