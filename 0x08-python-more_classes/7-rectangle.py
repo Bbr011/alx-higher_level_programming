@@ -1,18 +1,24 @@
 #!/usr/bin/python3
-
-"""class rectangle"""
+"""Defines a Rectangle class."""
 
 
 class Rectangle:
-    """rectangle"""
+    """Represent a rectangle.
+
+    Attributes:
+        number_of_instances (int): The number of Rectangle instances.
+        print_symbol (any): The symbol used for string representation.
+    """
+
     number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        """initiaze new rectangle
+        """Initialize a new Rectangle.
+
         Args:
-           width: width of rectangle
-           height: height of rectangle
+            width (int): The width of the new rectangle.
+            height (int): The height of the new rectangle.
         """
         type(self).number_of_instances += 1
         self.width = width
@@ -20,8 +26,8 @@ class Rectangle:
 
     @property
     def width(self):
-        """retrieve the width of rectangle"""
-        return (self.__width)
+        """Get/set the width of the Rectangle."""
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -33,7 +39,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """retrieve the height of rectangle."""
+        """Get/set the height of the Rectangle."""
         return self.__height
 
     @height.setter
@@ -45,11 +51,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """area of rectangle"""
+        """Return the area of the Rectangle."""
         return (self.__width * self.__height)
 
     def perimeter(self):
-        """perimeter of square"""
+        """Return the perimeter of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
