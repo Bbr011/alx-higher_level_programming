@@ -2,23 +2,16 @@
 """Defines an inherited class-checking function"""
 
 
-def is_kind_of_class(obj, a_class):
+def inherits_from(obj, a_class):
     """
-    Checks if obj is an instance of, or if obj is an instance of a class that inherited from, a_class.
-
-    Parameters:
-    obj: object
-        The object to check.
-    a_class: type
-        The class to check against.
-
+    Check if obj is an instance of a class that inherited (directly or indirectly)
+    from the specified class a_class.
+    
+    Args:
+        obj: Object to check.
+        a_class: Class to check inheritance against.
+        
     Returns:
-    bool: True if obj is an instance of a_class or its subclass, otherwise False.
+        True if obj is an instance of a subclass of a_class, otherwise False.
     """
-     if type(obj) is a_class:
-        return False
-
-    for base in obj.__class__.__bases__:
-        if base is a_class or inherits_from(base, a_class):
-            return True
-    return False
+    return isinstance(obj, type) and issubclass(obj, a_class) and obj != a_class
