@@ -91,4 +91,4 @@ class Rectangle(Base):
 
     def display(self):
         """string format"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.__id, self.__x, self.__y, self.__width, self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
