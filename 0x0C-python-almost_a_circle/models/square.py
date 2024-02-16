@@ -71,7 +71,7 @@ class Square(Rectangle):
         """returns a dic of atributes"""
         return {
             "id": self.id,
-            "size": self.width,
+            "size": self.height,
             "x": self.x,
             "y": self.y
         }
