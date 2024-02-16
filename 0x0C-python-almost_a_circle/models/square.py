@@ -67,6 +67,15 @@ class Square(Rectangle):
                 elif k == "y":
                     self.y = v
 
+    def to_dictionary(self):
+        """returns a dic of atributes"""
+        return {
+                "id": self.id
+                "size": self.size
+                "x": self.x
+                "y": self.y
+        }
+
     def __str__(self):
         """Return the print() and str() representation of the Rectangle."""
         return "[Squere] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.height)
