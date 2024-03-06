@@ -10,6 +10,6 @@ def append_write(filename="", text=""):
     Returns:
         lenght of text appended
     """
-    with open(filename, 'a', encoding="uft-8") as f:
+    with open(filename, "a", encoding="utf-8") as f:
         f.write(text)
         return (len(text))
