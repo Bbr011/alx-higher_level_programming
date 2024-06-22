@@ -8,7 +8,7 @@ if __name__ == "__main__":
     c = db.cursor()
     c.execute("SELECT * FROM states ORDER BY states.id ASC")
     for s in c.fetchall():
-        if s[0].startswith("N"):
+        if s[1].startswith("N"):
             print(s)
     c.close()
     db.close()
