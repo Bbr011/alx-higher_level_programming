@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 # script that list all the states databases of hbtn_0e_0_usa.
-# args: mysql username, mysql password, database name
 import MySQLdb
 import sys
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     db = MySQLdb.connect(user=sys.args[1], password=sys.args[2], db=sys.args[3])
     c = MySQLdb.cursor()
     c.execute(SELECT * FROM 'states')
