@@ -4,7 +4,7 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(user=sys.args[1], password=sys.args[2], db=sys.args[3])
+    db = MySQLdb.connect(user=sys.argv[1], password=sys.argv[2], db=sys.argv[3])
     c = MySQLdb.cursor()
     c.execute(SELECT * FROM 'states')
     for s in c.fetchall():
