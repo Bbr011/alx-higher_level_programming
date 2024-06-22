@@ -6,6 +6,6 @@ import sys
 if __name__ == "__main__":
     db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     c = db.cursor()
-    c.execute("SELECT * FROM `states`")
+    c.execute("SELECT * FROM `states` ORDER BY ID")
     for s in c.fetchall():
         print(s)
