@@ -15,5 +15,5 @@ if __name__ == "__main__":
     s = Session()
     state = s.query(State).filter(State.name.like('%a%'))order_by(State.id).all()
     for row in state:
-        print("{}: {}",format(state.id, state.name))
+        print("{}: {}".format(state.id, state.name))
     s.close()
