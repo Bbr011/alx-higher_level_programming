@@ -13,7 +13,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     s = Session()
-    rows = s.query(State).filter(State.name.like('%a%'))order_by(State.id).all()
-    for row in rows:
+    for state in session.query(State).\
+            filter(State.name.like('%a%')).order_by(State.id).all():
         print("{}: {}".format(state.id, state.name))
-    s.close()
+    session.close()
